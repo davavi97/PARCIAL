@@ -40,8 +40,17 @@ public class Personajes extends Thread{
 
 	
 	public void mover() {
-		posX++;
-	}
+		//posX++;
+			if(moverse) {
+				posX+=2;
+			} else {
+				posX-=2;
+			}
+			
+			if(posX < 0) moverse = true;
+			if(posX > app1.height) moverse = false;
+		}
+	
 
 	public int getPosX() {
 		return posX;
