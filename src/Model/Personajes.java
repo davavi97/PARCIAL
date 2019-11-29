@@ -11,7 +11,7 @@ public class Personajes extends Thread{
 	
 	public Personajes(PApplet app1) {
 		this.app1=app1;
-		this.posX=20;
+		this.posX=200;
 		vivo=true;
 		Homero = app1.loadImage("Data/homero_simpson.png");
 	}
@@ -21,7 +21,7 @@ public class Personajes extends Thread{
 		while(true) {
 			mover();
 			try {
-				Thread.sleep(100);
+				Thread.sleep(10);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -30,20 +30,24 @@ public class Personajes extends Thread{
 	
 	public void pintar() {
 		app1.image(Homero, posX, 0, 70, 100);
+		
+		
 	}
 	
-/*	public boolean validar() {
-		if(app1.dist(app1.mouseX, app1.mouseY, posX, 20) <25) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-*/
+
 	
 	public void mover() {
 		posX++;
 	}
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+	
 	
 		
 	}
