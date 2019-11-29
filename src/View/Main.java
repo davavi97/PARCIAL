@@ -1,6 +1,7 @@
 package View;
 
 import Model.Logica;
+import Model.MiExcepcion;
 import processing.core.PApplet;
 
 public class Main extends PApplet {
@@ -18,9 +19,16 @@ public class Main extends PApplet {
 		size(1000,600);
 	}
 	public void draw() {
-		background(208,200,260);
+		background(255);
 		logica.pintar();
-	}
+		try {
+			logica.Excepciones();
+		} catch (MiExcepcion e) {
+			System.out.println(e.getMessage());
+		}
+			
+		}
+	
 	public void mousePressed() {
 		
 	}

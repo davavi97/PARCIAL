@@ -8,6 +8,7 @@ public class Logica {
 	private PImage Homero, Bart;
 	Personajes personajes;
 	private Personajes [] arrPerso;
+	private int cont;
 
 	
 	
@@ -18,20 +19,22 @@ public class Logica {
 		this.personajes= new Personajes(app);
 		arrPerso = new Personajes [10];
 		personajes.start();
+		cont++;
 		
 	}
 	
 	public void pintar() {
 		personajes.pintar();
-	//	for(int i = 0; i < arrPerso.length; i++) {
-		//	personajes.pintar();
-		//	arrPerso[i].pintar();
-	
-		//System.out.println(arrPerso);
+	for(int i = 0; i < cont; i++) {
+		cont++;
+		
+	}
 	}
 	
 	public void Excepciones() throws MiExcepcion{
-		//if(personajes.getPosX()
+		if(cont >10) {
+			throw new MiExcepcion("Intente");
+		}
 	}
 }
 
