@@ -23,13 +23,15 @@ public class Logica {
 	
 	public void pintar() {
 		personajes.pintar();
-		for(int i = 0; i < arrPerso; i++) {
-			arrPerso[i].pintar();
-	}
+	//	for(int i = 0; i < arrPerso.length; i++) {
+		//	personajes.pintar();
+		//	arrPerso[i].pintar();
+	
 		//System.out.println(arrPerso);
 	}
+	
 	public void Excepciones() throws MiExcepcion{
-		//if(personajes.)
+		//if(personajes.getPosX()
 	}
 }
 
